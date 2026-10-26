@@ -81,4 +81,12 @@ src/index.html  The complete player UI
 supabase.json   Supabase project URL + public (publishable) key
 supabase-schema.sql  Database tables, RLS policies, and functions for accounts
 build/icon.ico  App and installer icon
+LICENSE         All rights reserved — Archive is proprietary software
+THIRD-PARTY-NOTICES.md  Licenses for the open-source components Archive ships with
 ```
+
+## License
+
+Archive is proprietary. Copyright is held by the author; all rights reserved. See `LICENSE`.
+
+The open-source libraries bundled inside the app keep their own licenses — see `THIRD-PARTY-NOTICES.md`, also shipped inside the installed app.
