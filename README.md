@@ -12,6 +12,10 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Embedded cover art from MP3 / FLAC / M4A tags
 - Custom folder covers
 - Accent colors, dark/light/auto themes, corner styles, background image or animated GIF, glass and glow settings
+- **Ctrl + K** command palette — search every song, playlist, and action
+- Play counts, plus a **Most played** shelf on Home
+- Duplicate finder that shows where repeated songs live (it never deletes anything)
+- Optional **Discord Rich Presence** — “Listening to …” on your profile
 - Native Windows media keys and media popup
 - Remembers your folders, covers, and settings between launches
 - Email + password account required before the app opens
@@ -19,6 +23,10 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Automatic updates: new versions are downloaded and offered inside the app
 
 Supported audio: `mp3`, `wav`, `flac`, `m4a`, `ogg`, `aac`, `opus`.
+
+## Discord status
+
+Archive can show **Listening to *song* — *folder*** on your Discord profile. Open **Settings → Discord status**, create a free application at [discord.com/developers/applications](https://discord.com/developers/applications), copy its **Application ID**, paste it in, and press **Save**. Discord has to be running for the status to appear. Only the song name and folder name are sent to Discord — nothing else.
 
 ## Install
 
