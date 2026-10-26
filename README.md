@@ -13,7 +13,9 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Custom folder covers
 - Accent colors, dark/light/auto themes, corner styles, background image or animated GIF, glass and glow settings
 - **Ctrl + K** command palette — search every song, playlist, and action
+- Search inside a playlist — type to filter the song list as you go
 - Play counts, plus a **Most played** shelf on Home
+- Reactive backgrounds: **Glow**, **Pulse**, or **Blobs** move with the music
 - Duplicate finder that shows where repeated songs live (it never deletes anything)
 - Optional **Discord Rich Presence** — “Listening to …” on your profile
 - Native Windows media keys and media popup
@@ -27,6 +29,10 @@ Supported audio: `mp3`, `wav`, `flac`, `m4a`, `ogg`, `aac`, `opus`.
 ## Discord status
 
 Archive can show **Listening to *song* — *folder*** on your Discord profile. Open **Settings → Discord status**, create a free application at [discord.com/developers/applications](https://discord.com/developers/applications), copy its **Application ID**, paste it in, and press **Save**. Discord has to be running for the status to appear. Only the song name and folder name are sent to Discord — nothing else.
+
+## Reactive background
+
+Settings → **Reactive background** → **Glow**, **Pulse**, or **Blobs**. Archive listens to the bass of whatever is playing and moves the background with it. *Glow* lights the bottom of the window, *Pulse* breathes your background picture, and *Blobs* drifts soft colour clouds. Glow and Blobs work without a background picture; Pulse needs one. Turn it off any time with the same buttons.
 
 ## Install
 
