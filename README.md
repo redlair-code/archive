@@ -15,7 +15,8 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - **Ctrl + K** command palette — search every song, playlist, and action
 - Search inside a playlist — type to filter the song list as you go
 - Play counts, plus a **Most played** shelf on Home
-- Reactive backgrounds: **Glow**, **Pulse**, or **Blobs** move with the music
+- Reactive backgrounds: **Glow**, **Pulse**, **Bars**, or **Blobs** move with the music
+- Optional **song art background** — the playing cover fills the backdrop, blurred
 - Duplicate finder that shows where repeated songs live (it never deletes anything)
 - Optional **Discord Rich Presence** — “Listening to …” on your profile
 - Native Windows media keys and media popup
@@ -32,7 +33,9 @@ Archive can show **Listening to *song* — *folder*** on your Discord profile. O
 
 ## Reactive background
 
-Settings → **Reactive background** → **Glow**, **Pulse**, or **Blobs**. Archive listens to the bass of whatever is playing and moves the background with it. *Glow* lights the bottom of the window, *Pulse* breathes your background picture, and *Blobs* drifts soft colour clouds. Glow and Blobs work without a background picture; Pulse needs one. Turn it off any time with the same buttons.
+Settings → **Reactive background** → **Glow**, **Pulse**, **Bars**, or **Blobs**. Archive listens to the bass of whatever is playing and moves the background with it. *Glow* lights the bottom of the window, *Pulse* breathes your background picture, *Bars* draws a live equalizer across the backdrop, and *Blobs* drifts soft colour clouds. Glow, Bars, and Blobs work without a background picture; Pulse needs one — your background image, or Song art background switched on. Turn it off any time with the same buttons.
+
+Settings → **Song art background** → **On** makes the cover of the current song the backdrop, blurred behind the panels. Songs without embedded art fall back to the folder cover, then to your normal background. The art also replaces the picture that Pulse uses, so the two options combine.
 
 ## Install
 
