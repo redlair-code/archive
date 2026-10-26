@@ -14,7 +14,7 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Accent colors, dark/light/auto themes, corner styles, background image or animated GIF, glass and glow settings
 - Native Windows media keys and media popup
 - Remembers your folders, covers, and settings between launches
-- Optional email + password accounts (press **Skip for now** and the app behaves exactly as before)
+- Email + password account required before the app opens
 - A host view listing every account's email, signup date, and last launch
 - Automatic updates: new versions are downloaded and offered inside the app
 
@@ -36,7 +36,9 @@ Anyone still on 1.0.0 needs to install 1.1.0 or newer once by hand; after that, 
 
 ## Accounts
 
-Accounts are optional. On first launch you can create one with an email and password, or press **Skip for now** and never see the prompt again. No account is needed to play music, and signing out never touches your folders, covers, or settings.
+An account is required. On first launch you create one with an email and password, and the app stays locked behind the sign-in screen until you do. The session is kept between launches, so this only happens once per PC. Signing out or deleting your account never touches your folders, covers, or settings.
+
+Signing in needs a connection. Once signed in, a saved session keeps working offline; a machine that has never signed in needs the network the first time.
 
 Accounts are backed by Supabase (row-level security on, passwords hashed by the auth service). Only the email address, signup date, and last launch time are stored. The public key shipped in `supabase.json` is safe to expose; the database policies are what restrict access. The service-role key must never be added to the app.
 
