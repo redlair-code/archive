@@ -11,7 +11,7 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Volume and loudness boost
 - Embedded cover art from MP3 / FLAC / M4A tags
 - Custom folder covers
-- Accent colors, dark/light/auto themes, corner styles, background image, glass and glow settings
+- Accent colors, dark/light/auto themes, corner styles, background image or animated GIF, glass and glow settings
 - Native Windows media keys and media popup
 - Remembers your folders, covers, and settings between launches
 - Automatic updates: new versions are downloaded and offered inside the app
