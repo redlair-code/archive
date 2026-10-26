@@ -15,7 +15,7 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Native Windows media keys and media popup
 - Remembers your folders, covers, and settings between launches
 - Email + password account required before the app opens
-- A host view listing every account's email, signup date, and last launch
+- A host view listing every account's email, signup date, and live activity
 - Automatic updates: new versions are downloaded and offered inside the app
 
 Supported audio: `mp3`, `wav`, `flac`, `m4a`, `ogg`, `aac`, `opus`.
@@ -40,7 +40,11 @@ An account is required. On first launch you create one with an email and passwor
 
 Signing in needs a connection. Once signed in, a saved session keeps working offline; a machine that has never signed in needs the network the first time.
 
-Accounts are backed by Supabase (row-level security on, passwords hashed by the auth service). Only the email address, signup date, and last launch time are stored. The public key shipped in `supabase.json` is safe to expose; the database policies are what restrict access. The service-role key must never be added to the app.
+Accounts are backed by Supabase (row-level security on, passwords hashed by the auth service). Only the email address, signup date, and last activity time are stored. The public key shipped in `supabase.json` is safe to expose; the database policies are what restrict access. The service-role key must never be added to the app.
+
+### Activity
+
+While the app is open and signed in, it pings `touch_last_seen()` once a minute, so the host list shows **active now** (any ping in the last three minutes, with a pulsing dot), then "x min ago", "x hours ago", and so on. The list refreshes itself every 20 seconds while it is open. No page views, track names, or window titles are recorded — only a timestamp.
 
 Setting up from scratch: create a Supabase project, run `supabase-schema.sql` in the SQL Editor, then put the Project URL and publishable key into `supabase.json`. The first account to sign up becomes the host automatically. To promote an existing account by hand:
 
