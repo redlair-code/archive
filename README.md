@@ -14,23 +14,23 @@ A local music archive player for Windows. Point it at a folder of songs and that
 - Accent colors, dark/light/auto themes, corner styles, background image, glass and glow settings
 - Native Windows media keys and media popup
 - Remembers your folders, covers, and settings between launches
-- Automatic updates: new versions are offered inside the app
+- Automatic updates: new versions are downloaded and offered inside the app
 
 Supported audio: `mp3`, `wav`, `flac`, `m4a`, `ogg`, `aac`, `opus`.
 
 ## Install
 
 1. Download `Archive-Setup-x.y.z.exe` from the [latest release](https://github.com/redlair-code/archive/releases/latest).
-2. Windows may show "Windows protected your PC" because the installer is not code-signed. Click **More info â†’ Run anyway**.
+2. Windows may show "Windows protected your PC" because the installer is not code-signed. Click **More info → Run anyway**.
 3. Open **Archive**, click **+ Attach folder**, and pick a music folder.
 
 The app only reads the folders you attach. It never copies, moves, or uploads your music.
 
 ## Updates
 
-Archive checks for a newer release when it starts and every few hours. When an update is ready it shows a **Restart** prompt. You can also check manually in **Settings â†’ Updates**.
+Archive checks for a newer release when it starts and every few hours. When an update finishes downloading, a pill appears in the top-right corner: **Update vX.Y.Z is ready → Restart**. You can also check manually in **Settings → Updates**.
 
-The first public release with the updater is **1.1.0**. Anyone on 1.0.0 needs to install 1.1.0 once; after that, updates are automatic.
+Anyone still on 1.0.0 needs to install 1.1.0 or newer once by hand; after that, updates arrive inside the app.
 
 ## Build from source
 
@@ -43,9 +43,10 @@ npm run dist
 
 The installer is written to `dist\Archive-Setup-<version>.exe`.
 
-To publish a new release (requires `GH_TOKEN` or `gh auth login`):
+To publish a new release (requires `gh auth login` or a `GH_TOKEN`):
 
 ```powershell
+$env:GH_TOKEN = (gh auth token)
 npm run release:patch
 ```
 
